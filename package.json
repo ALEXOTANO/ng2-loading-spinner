@@ -3,14 +3,21 @@
   "version": "1.2.0",
   "scripts": {
     "start": "ng serve",
+	"build-ng":"ng-packagr -p package.json",
     "build:lib": "ng build --prod ng2-loading-spinner",
     "npm-pack": "cd ./dist/ng2-loading-spinner && npm pack",
     "package": "npm run build:lib && npm run npm-pack",
     "build:ghpage": "ng build --prod --base-href 'https://me-majidi.github.io/ng2-loading-spinner/'",
     "publish:ghpage": "ngh --dir dist/ng2-loading-spinner-app --message='Update gh-page' --branch=gh-pages --repo='git@github.com:me-majidi/ng2-loading-spinner.git'"
   },
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "ngPackage": {
+    "lib": {
+      "entryFile": "src/main.ts"
+    }
+  },
   "private": true,
-  "dependencies": {
+  "peerDependencies": {
     "@angular/animations": "^7.1.2",
     "@angular/common": "^7.1.2",
     "@angular/compiler": "^7.1.2",
@@ -30,7 +37,7 @@
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.11.0",
+    "@angular-devkit/build-angular": "^0.803.14",
     "@angular-devkit/build-ng-packagr": "~0.11.0",
     "@angular/cli": "^7.1.2",
     "@angular/compiler-cli": "^7.1.2",
@@ -46,7 +53,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.0",
     "karma-jasmine": "~1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "ng-packagr": "^3.0.0-rc.2",
+    "ng-packagr": "^3.0.6",
     "protractor": "~5.3.0",
     "ts-node": "~5.0.1",
     "tsickle": "^0.34.0",

@@ -23,7 +23,8 @@
       ],
       "ng2-loading-spinner/*": [
         "dist/ng2-loading-spinner/*"
-      ]
+      ],
+	  "@projects/*":["src/projects/*"]
     }
   }
 }

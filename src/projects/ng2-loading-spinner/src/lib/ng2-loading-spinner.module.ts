@@ -6,12 +6,12 @@ import {Ng2LoadingSpinnerDirective} from './ng2-loading-spinner.directive';
 import {INg2LoadingSpinnerConfig} from './config';
 
 @NgModule({
+    entryComponents: [Ng2LoadingSpinnerComponent],
     imports: [
         CommonModule
     ],
     declarations: [Ng2LoadingSpinnerComponent, Ng2LoadingSpinnerDirective],
     exports: [Ng2LoadingSpinnerDirective],
-    entryComponents: [Ng2LoadingSpinnerComponent]
 })
 export class Ng2LoadingSpinnerModule {
     static forRoot(globalConfig: INg2LoadingSpinnerConfig): ModuleWithProviders {

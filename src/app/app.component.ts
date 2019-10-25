@@ -1,6 +1,6 @@
 import {AfterContentChecked, Component, TemplateRef, ViewChild} from '@angular/core';
-import { ANIMATION_TYPES } from '../../projects/ng2-loading-spinner/src/public_api';
-import { INg2LoadingSpinnerConfig } from '../../projects/ng2-loading-spinner/src/lib/config';
+import { ANIMATION_TYPES } from '../projects/ng2-loading-spinner/src/public_api';
+import { INg2LoadingSpinnerConfig } from '../projects/ng2-loading-spinner/src/lib/config';
 import { NgForm } from '@angular/forms';
 
 @Component({
